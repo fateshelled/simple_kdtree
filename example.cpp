@@ -1,6 +1,6 @@
-#include "simple_kdtree.h"
 #include <iostream>
 #include <vector>
+#include "simple_kdtree.h"
 
 struct point2d
 {
@@ -64,12 +64,7 @@ int main()
 {
     // 2D Points
     {
-
-        const std::vector<point2d> points = {
-            {1, 2},
-            {3, 4},
-            {5, 6}
-        };
+        const std::vector<point2d> points = {{1, 2}, {3, 4}, {5, 6}};
 
         // Create a KDTree 2D
         const simple_kdtree::KDTree<point2d> tree(points);
@@ -89,11 +84,7 @@ int main()
 
     // 3D Points
     {
-        const std::vector<point3d> points = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
-        };
+        const std::vector<point3d> points = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
         // Create a KDTree 3D
         const simple_kdtree::KDTree<point3d> tree(points);
